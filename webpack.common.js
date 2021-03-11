@@ -1,18 +1,11 @@
 const path = require('path')
-const HmtlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = {
-    entry: './exmpales/index.js',
     output: {
-        filename: '[hash].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
-    plugins: [
-        new HmtlWebpackPlugin({
-            template: 'index.html',
-            inject: 'head'
-        })
-    ],
     module: {
         rules: [
             {
